@@ -22,9 +22,8 @@ La API de **Planify** es una solución integral para la gestión de viajes, desa
 
 ## Tecnologías utilizadas
 
-- **Backend**: Laravel (PHP)
+- **Framework**: Laravel (PHP)
 - **Base de datos**: MySQL
-- **Frontend**: React (consumidor de la API)
 - **Autenticación**: Laravel Sanctum (tokens para autenticación segura)
 
 ## Instalación
