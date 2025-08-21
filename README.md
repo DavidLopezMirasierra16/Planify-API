@@ -1,66 +1,56 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Planify API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+La API de **Planify** es una solución integral para la gestión de viajes, desarrollada con **Laravel** y **MySQL**. Está diseñada para ser consumida por aplicaciones frontend como **React** y proporciona endpoints RESTful para interactuar con usuarios, reservas, vuelos, hoteles, itinerarios y tareas relacionadas.
 
-## About Laravel
+## Funcionalidades principales
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Gestión de usuarios
+- **Registro y autenticación**: Permite a los usuarios registrarse e iniciar sesión.
+- **Perfil de usuario**: Consulta y actualización de la información del perfil.
+- **Roles y permisos**: Gestión de roles para controlar el acceso a diferentes recursos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Gestión de viajes
+- **Reservas de vuelos**: Realización de reservas de vuelos.
+- **Reservas de hoteles**: Gestión de reservas de alojamiento.
+- **Itinerarios de viaje**: Creación y consulta de itinerarios personalizados.
+- **Tareas relacionadas**: Asignación y seguimiento de tareas vinculadas a los viajes.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Plataforma completa
+- **API RESTful**: Endpoints estructurados para facilitar la integración con aplicaciones frontend.
+- **Formato JSON**: Respuestas en formato JSON para una fácil manipulación de datos.
+- **Seguridad**: Implementación de autenticación basada en tokens para proteger los recursos sensibles.
 
-## Learning Laravel
+## Tecnologías utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend**: Laravel (PHP)
+- **Base de datos**: MySQL
+- **Frontend**: React (consumidor de la API)
+- **Autenticación**: Laravel Sanctum (tokens para autenticación segura)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Instalación
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clonar el repositorio:
 
-## Laravel Sponsors
+   ```bash
+   git clone https://github.com/DavidLopezMirasierra16/Planify-API.git
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Instalar las dependencias de Laravel:
 
-### Premium Partners
+   ```bash
+   cd Planify-API
+   composer install
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. Configurar el archivo .env con los datos de conexión a la base de datos y las claves necesarias.
+4. Ejecutar las migraciones y seeders (opcional):
+   
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## Contributing
+5. Iniciar el servidor de desarrollo:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   php artisan serve
+   ```
